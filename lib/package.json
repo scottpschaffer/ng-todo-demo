@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/scottpschaffer/ng-todo-demo/issues"
   },
-  "homepage": "https://github.com/scottpschaffer/ng-todo-demo#readme"
+  "homepage": "https://github.com/scottpschaffer/ng-todo-demo#readme",
+  "dependencies": {}
 }
