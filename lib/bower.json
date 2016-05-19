@@ -1,0 +1,17 @@
+{
+  "name": "angular",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "scottpschaffer <scottpschaffer@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/scottpschaffer/ng-todo-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
