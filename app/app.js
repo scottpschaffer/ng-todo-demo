@@ -41,7 +41,7 @@ app.controller("TodoCtrl", function($scope){
       urgency: "low",
       dependencies: ["sunshine, clippers, hat, water, headphones"]
     }
-  ]
+  ];
 
   $scope.newItem = function(){
     console.log("you clicked new Item");
@@ -57,5 +57,5 @@ app.controller("TodoCtrl", function($scope){
     console.log("You added a new Item", $scope.NewTask);
     $scope.items.push($scope.NewTask);
     $scope.NewTask="";
-  }
+  };
 });
