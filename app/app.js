@@ -23,7 +23,7 @@ app.controller("TodoCtrl", function($scope){
     },
     {
       id: 1,
-      task: "grade quizzes",
+      task: "grade quizzes zoe",
       isCompleted: false,
       dueDate: "12/12/17",
       assignedTo: "Joe",
