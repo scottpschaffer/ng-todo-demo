@@ -1,0 +1,30 @@
+<h1>New Todo</h1>
+  <form>
+    <div class="form-group">
+    <label>Task Description</label>
+    <input type="text" class="form-control" placeholder="Some important task" ng-model="NewTask.task">
+
+    <div class="form-group">
+    <label>Due Date</label>
+    <input type="text" class="form-control" placeholder="Some important task" ng-model="NewTask.dueDate">
+
+    <div class="form-group">
+    <label>Assigned To</label>
+    <input type="text" class="form-control" placeholder="Some important task" ng-model="NewTask.assignedTo">
+  </div>
+    <div class="form-group">
+    <label>Location</label>
+    <input type="text" class="form-control" placeholder="Some important task" ng-model="NewTask.location">
+    </div>
+    <div class="form-group">
+    <label>Urgency</label>
+    <input type="text" class="form-control" placeholder="Some important task" ng-model="NewTask.urgency">
+    </div>
+    <div class="form-group">
+    <label>Dependencies</label>
+    <input type="text" class="form-control" placeholder="Some important task" ng-model="NewTask.dependencies">
+    </div>
+
+    <button class="btn btn-default" ng-click="addNewItem()">Submit</button>
+
+</form>
