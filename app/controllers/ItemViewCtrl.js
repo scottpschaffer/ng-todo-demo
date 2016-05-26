@@ -1,22 +1,14 @@
-app.controller("ItemViewCtrl", function($scope, $http, $routeParams){
+app.controller("ItemViewCtrl", function($scope, $routeParams, itemStorage){
   $scope.items=[];
   $scope.selectedItem = {};
   console.log($routeParams.itemId);
       
-  $http.get("https://todo-appz2-scott.firebaseio.com/items.json")
-    .success(function(itemObject){
-      var itemCollection = itemObject;
-      // var itemCollection = itemObject.items;
-      console.log("itemObject", itemObject);
-        Object.keys(itemCollection).forEach(function(key){
-          itemCollection[key].id=key;
-          $scope.items.push(itemCollection[key]);
+  itemStorage.getItemList().then(function(itemCollection){
+    console.log("itemCollection from promise", itemCollection);
+    $scope.items = itemCollection;
 
-          $scope.selectedItem = $scope.items.filter(function(item){
-            return item.id === $routeParams.itemId;
-          })[0];
-
-
-        })
-  });
+    $scope.selectedItem = $scope.items.filter(function(item){
+      return item.id === $routeParams.itemId;
+    })[0];
+  })
 });
