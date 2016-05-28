@@ -1,5 +1,4 @@
 app.controller("ItemListCtrl", function($scope, itemStorage){
-  console.log("Help");
   $scope.items = [];
 
   itemStorage.getItemList().then(function(itemCollection){
@@ -9,11 +8,19 @@ app.controller("ItemListCtrl", function($scope, itemStorage){
 
 
   $scope.itemDelete = function(itemId){
-    console.log("itemId", itemId);
     itemStorage.deleteItem(itemId).then(function(response){
       itemStorage.getItemList().then(function(itemCollection){
         $scope.items = itemCollection;
       })
+    })
+  };
+
+  $scope.inputChange = function(item){
+    console.log("item", item);
+    itemStorage.updateCompletedStatus(item)
+      .then(function(response){
+        console.log(response);
+
     })
   }
 
